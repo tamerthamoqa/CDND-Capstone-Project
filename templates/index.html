@@ -16,8 +16,9 @@
         </div>
       </div>
       <form method=POST enctype=multipart/form-data action="{{ url_for('predict') }}">
-        <input type=file name=file>
-        <input type=submit value=Submit>
+          <br>
+          <input type=file name=file class="btn btn-outline-dark">
+          <input type=submit value=Submit class="btn btn-outline-dark">
       </form>
     </div>
     <p style="margin-bottom:2cm;"></p>
