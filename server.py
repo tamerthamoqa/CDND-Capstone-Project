@@ -5,6 +5,7 @@ import os
 import json
 from base64 import b64encode
 from PIL import Image
+import logging
 from flask import Flask, request, render_template
 from waitress import serve
 
@@ -13,6 +14,9 @@ app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
 app.secret_key = os.urandom(24)
 ALLOWED_EXTENSIONS = {'png', 'PNG', 'jpg', 'JPG', 'jpeg', 'JPEG'}
+
+logger = logging.getLogger('waitress')
+logger.setLevel(logging.INFO)
 
 
 def allowed_file(filename):
@@ -40,6 +44,11 @@ def predict():
             top_1_prediction = prediction.max(dim=1)
             prediction_probability = "{:.2f}%".format(float(top_1_prediction[0]))
             prediction_class = imagenet_class_index[str(int(top_1_prediction[1]))]
+            logger.info("Prediction Class: {}\nPrediction Probability: {}".format(
+                    prediction_class,
+                    prediction_probability
+                )
+            )
 
             # Prepare display image on HTML page
             display_img = io.BytesIO()
