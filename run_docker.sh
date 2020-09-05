@@ -4,4 +4,4 @@ docker build --tag=udacity-devops-capstone .
 
 docker image ls
 
-docker run -p 8000:80 udacity-devops-capstone
+docker run -p 8080:80 udacity-devops-capstone
