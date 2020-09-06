@@ -3,9 +3,9 @@ import torchvision.transforms as transforms
 import io
 import os
 import json
+import logging
 from base64 import b64encode
 from PIL import Image
-import logging
 from flask import Flask, request, render_template
 from waitress import serve
 
