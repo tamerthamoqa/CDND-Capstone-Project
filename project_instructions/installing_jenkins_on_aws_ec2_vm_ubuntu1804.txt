@@ -26,4 +26,27 @@ sudo systemctl enable jenkins
 sudo systemctl status jenkins
 
 # For HTML linting
-sudo apt-get install tidy 
+sudo apt-get install tidy
+
+# Install docker
+sudo apt install -y docker.io
+sudo systemctl start docker
+
+# Install Pylint
+sudo apt install -y pylint
+
+# Install AWS-CLI
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+sudo apt install -y unzip
+unzip awscliv2.zip
+sudo ./aws/install
+# Proceed to configure the aws cli with the 'aws configure' command and make sure the region is 'us-east-1'
+
+# Install eksctl
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+sudo mv /tmp/eksctl /usr/local/bin
+
+# Install  the Amazon EKS vended kubectl binary
+curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.17.9/2020-08-04/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin
