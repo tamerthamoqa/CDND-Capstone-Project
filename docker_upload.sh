@@ -7,6 +7,6 @@ dockerpath=tamerthamoqa/udacity-devops-capstone
 
 echo "Docker ID and Image: $dockerpath"
 docker login --username=tamerthamoqa
-docker tag udacity-devops-capstone tamerthamoqa/udacity-devops-capstone
+docker tag udacity-devops-capstone $dockerpath
 
-docker push tamerthamoqa/udacity-devops-capstone
+docker push $dockerpath
