@@ -4,4 +4,8 @@ https://medium.com/@andresaaap/capstone-cloud-devops-nanodegree-4493ab439d48
 
 https://medium.com/@gustavo.guss/jenkins-building-docker-image-and-sending-to-registry-64b84ea45ee9
 
+https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html
+
+https://stackoverflow.com/questions/47854463/docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socke
+
 
