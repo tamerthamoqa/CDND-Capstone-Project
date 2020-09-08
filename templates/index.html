@@ -15,7 +15,7 @@
           <p class="lead">Submit an image to classify which ImageNet class it belongs to (maximum size: 10 MB):</p>
         </div>
       </div>
-      <form method=POST enctype=multipart/form-data action="{{url_for('predict')}}">
+      <form method=POST enctype=multipart/form-data action="{{ url_for('predict') }}">
           <br>
           <input type=file name=file class="btn btn-outline-dark">
           <input type=submit value=Submit class="btn btn-outline-dark">
