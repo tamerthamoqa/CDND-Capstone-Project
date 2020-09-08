@@ -8,4 +8,6 @@ https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html
 
 https://stackoverflow.com/questions/47854463/docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socke
 
+https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html
+
 
