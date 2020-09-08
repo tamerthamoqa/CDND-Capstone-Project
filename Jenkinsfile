@@ -24,7 +24,11 @@ pipeline
         {
               steps
               {
-                  sh 'docker build --tag=udacity-devops-capstone .'
+                  withCredentials([usernamePassword( credentialsId: 'dockerhub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')])
+                  {
+                      sh "sudo docker login -u ${USERNAME} -p ${PASSWORD}"
+                      sh 'sudo docker build --tag=udacity-devops-capstone .'
+                  }
               }
         }
 
