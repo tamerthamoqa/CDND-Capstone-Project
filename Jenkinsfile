@@ -12,20 +12,6 @@ pipeline
             }
         }
 
-        stage('Lint Python File')
-        {
-            steps
-            {
-                // Install python requirements
-                sh 'pip3 install --upgrade pip && \
-                pip3 install --upgrade setuptools && \
-                pip3 install -r requirements.txt'
-                // E1101 was causing the following weird pylint warning:
-                //  Module 'torch' has no 'device' member (no-member), so decided to disable it
-                sh 'pylint --disable=R,C,W1202,W1203,E1101 server.py'
-            }
-        }
-
         stage('Lint Dockerfile')
         {
             steps
