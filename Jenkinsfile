@@ -36,12 +36,8 @@ pipeline
         {
             steps
             {
-                withDockerRegistry([url: "", credentialsId: "dockerhub"])
-                {
-                    sh 'sudo docker tag udacity-devops-capstone tamerthamoqa/udacity-devops-capstone'
-                    sh 'sudo docker push tamerthamoqa/udacity-devops-capstone'
-                }
-
+                sh 'sudo docker tag udacity-devops-capstone tamerthamoqa/udacity-devops-capstone'
+                sh 'sudo docker push tamerthamoqa/udacity-devops-capstone'
             }
         }
 
