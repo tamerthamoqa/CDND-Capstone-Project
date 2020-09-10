@@ -47,7 +47,10 @@ pipeline
             {
                 withAWS(region:'us-east-1', credentials:'aws')
                 {
-                    sh 'aws eks --region us-east-1 update-kubeconfig --name udacity-devops-capstone-cluster'
+                    sh 'aws eks --region us-east-1 update-kubeconfig --name udacity-devops-capstone-gpu-cluster'
+                    // The following would return an '(AlreadyExists)' error, creating the nvidia-device-plugin daemonset must be done when creating the
+                    //  EKS cluster separate from the Jenkins CI/CD pipeline
+                    // sh 'kubectl create -f https://raw.githubusercontent.com/NVIDIA/k8s-device-plugin/1.0.0-beta4/nvidia-device-plugin.yml'
                     sh 'kubectl apply -f kubernetes/kubernetes_deployment.yml'
                     sh 'kubectl get nodes'
                     sh 'kubectl get pods'
