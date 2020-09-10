@@ -13,3 +13,6 @@ https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html
 
 To fix the Jenkins sudo: no tty present and no askpass program specified with NOPASSWD issue:
 https://stackoverflow.com/a/24648413
+
+Useful note about deploying a kubernetes cluster using NVIDIA GPUs:
+https://stackoverflow.com/a/55094189
