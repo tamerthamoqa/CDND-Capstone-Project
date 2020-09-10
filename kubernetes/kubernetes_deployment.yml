@@ -23,7 +23,7 @@ metadata:
     app: udacity-devops-capstone
   namespace: default
 spec:
-  replicas: 2
+  replicas: 8
   selector:
     matchLabels:
       app: udacity-devops-capstone
