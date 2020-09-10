@@ -9,6 +9,12 @@ The objective of the project is as follows:
 * The Kubernetes cluster would contain two pods with one container each of the Docker image deployed on AWS EC2 `t3.large` instance nodes with the following Cluster AutoScaler setting: (minimum: one node, desired: two nodes, maximum: two nodes).
 * The Kubernetes cluster would be updated via a Rolling Update strategy.
 
+&nbsp;
+
+* __Post-Submission__: Changed the Kubernetes cluster configuration to deploy eight pods with one container each of the Docker image deployed on AWS EC2 `g4dn.xlarge` instance nodes that utilize the Tesla T4 GPU for accelerated machine learning and deep learning inference workloads with the same Cluster Autoscaling setting as before such that the containers would utilize the available GPU resources.
+
+![GPU utilization screenshot](screenshots/7-post-submission-gpu-utilization-kubernetes.png "GPU utilization screenshot")
+
 
 ## Requirements
 * [Docker](https://docs.docker.com/get-docker/)
